@@ -38,9 +38,6 @@ nnoremap <C-o> :NERDTreeToggle <cr>
 nnoremap <C-s> :w! <cr>
 nnoremap <C-q> :q! <cr>
 
-"Flag Bad White space
-au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
-
 "Python files config
 au BufNewFile,BufRead *.py
     \ set tabstop=4
