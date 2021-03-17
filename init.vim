@@ -3,7 +3,6 @@ call plug#begin()
 Plug 'scrooloose/nerdtree'
 Plug 'morhetz/gruvbox'
 Plug 'zxqfl/tabnine-vim'
-Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-eunuch'
@@ -18,8 +17,12 @@ Plug 'thaerkh/vim-indentguides'
 Plug 'kien/ctrlp.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'xuyuanp/nerdtree-git-plugin'
-
+Plug 'Shougo/deoplete.nvim'
+Plug 'bling/vim-airline'
+Plug 'sheerun/vim-polyglot'
+Plug 'maralla/completor.vim'
 call plug#end()
+
 
 
 "Interface Config
@@ -37,6 +40,7 @@ colorscheme gruvbox
 nnoremap <C-o> :NERDTreeToggle <cr>
 nnoremap <C-s> :w! <cr>
 nnoremap <C-q> :q! <cr>
+
 
 "Python files config
 au BufNewFile,BufRead *.py
@@ -82,3 +86,14 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
                 \ 'Clean'     :'✔︎',
                 \ 'Unknown'   :'?',
                 \ }
+
+" Ale
+let g:ale_fix_on_save = 1
+let g:ale_fixers = {
+\   'python': [
+\       'isort',
+\       'yapf',
+\       'remove_trailing_lines',
+\       'trim_whitespace'
+\   ]
+\}
