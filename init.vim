@@ -20,7 +20,8 @@ Plug 'xuyuanp/nerdtree-git-plugin'
 Plug 'Shougo/deoplete.nvim'
 Plug 'bling/vim-airline'
 Plug 'sheerun/vim-polyglot'
-Plug 'maralla/completor.vim'
+Plug 'cj/vim-webdevicons'
+
 call plug#end()
 
 
