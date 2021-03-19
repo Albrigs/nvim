@@ -21,6 +21,7 @@ Plug 'Shougo/deoplete.nvim'
 Plug 'bling/vim-airline'
 Plug 'sheerun/vim-polyglot'
 Plug 'cj/vim-webdevicons'
+Plug 'vim-scripts/bash-support.vim'
 
 call plug#end()
 
