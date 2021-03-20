@@ -22,6 +22,7 @@ Plug 'bling/vim-airline'
 Plug 'sheerun/vim-polyglot'
 Plug 'cj/vim-webdevicons'
 Plug 'vim-scripts/bash-support.vim'
+Plug 'gorodinskiy/vim-coloresque'
 
 call plug#end()
 
