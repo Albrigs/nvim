@@ -40,11 +40,6 @@ set mouse=a
 set background=dark
 colorscheme gruvbox
 
-"Shortcuts
-nnoremap <C-o> :NERDTreeToggle <cr>
-nnoremap <C-s> :w! <cr>
-nnoremap <C-q> :q! <cr>
-
 
 "Python files config
 au BufNewFile,BufRead *.py
@@ -130,5 +125,10 @@ function! s:swap_down()
     exec n + 1
 endfunction
 
+"Shortcuts
 noremap <silent> <c-s-up> :call <SID>swap_up()<CR>
 noremap <silent> <c-s-down> :call <SID>swap_down()<CR>
+nnoremap <C-o> :NERDTreeToggle <cr>
+nnoremap <C-r> :NERDTreeRefreshRoot <cr>
+nnoremap <C-s> :w! <cr>
+nnoremap <C-q> :q! <cr>
