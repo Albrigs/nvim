@@ -27,7 +27,8 @@ Plug 'frazrepo/vim-rainbow'
 
 call plug#end()
 
-
+"Paths you complete me
+let g:ycm_python_binary_path = 'python'
 
 "Interface Config
 syntax enable
@@ -58,17 +59,6 @@ au BufNewFile,BufRead *.js, *.html, *.css
     \ set tabstop=2
     \| set softtabstop=2
     \| set shiftwidth=2
-
-
-"virtualenv support
-py << EOF
-import os
-import sys
-if 'VIRTUAL_ENV' in os.environ:
-  project_base_dir = os.environ['VIRTUAL_ENV']
-  activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
-  execfile(activate_this, dict(__file__=activate_this))
-EOF
 
 let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
 
@@ -126,8 +116,8 @@ function! s:swap_down()
 endfunction
 
 "Shortcuts
-noremap <silent> <c-s-up> :call <SID>swap_up()<CR>
 noremap <silent> <c-s-down> :call <SID>swap_down()<CR>
+noremap <silent> <c-s-up> :call <SID>swap_up()<CR>
 nnoremap <C-o> :NERDTreeToggle <cr>
 nnoremap <C-r> :NERDTreeRefreshRoot <cr>
 nnoremap <C-s> :w! <cr>
