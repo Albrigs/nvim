@@ -24,6 +24,8 @@ Plug 'cj/vim-webdevicons'
 Plug 'vim-scripts/bash-support.vim'
 Plug 'gorodinskiy/vim-coloresque'
 Plug 'frazrepo/vim-rainbow'
+Plug 'davidhalter/jedi-vim'
+Plug 'vim-scripts/AutoComplPop'
 
 call plug#end()
 
@@ -41,6 +43,10 @@ set mouse=a
 set background=dark
 colorscheme gruvbox
 
+"complpop
+set complete+=kspell
+set completeopt=menuone,longest
+set shortmess+=c
 
 "Python files config
 au BufNewFile,BufRead *.py
